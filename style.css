@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    gap: 2rem;
+    height: 100vh;
+}
+#name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    width: 69%;
+    text-align: center;
+}
+#startGame{
+    width: 25%;
+    line-height: 3;
+    background: #0f0;
+    border: 0.5px dashed;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+    size: fill;
+}
+#game{
+    position: relative;
+    background-color: #8AF4C3;
+    padding: 2%;
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 1%;
+    overflow: hidden;
+}
+.container{
+    /* border: solid 1px black; */
+    background-color: #f1f1f1;
+    position: relative;
+    width: 18%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.picture{
+    /* background:url('./imgs/1.png') no-repeat center center/cover; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+    animation: rotate 0.5s linear forwards;
+    animation-delay: 3s;
+}
+
+.unknown{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    background-color: #fff;
+    cursor: pointer;
+    transform: rotateY(90deg);
+    animation: unrotate 0.5s linear forwards;
+    animation-delay: 3s;
+}
+#head{
+    width: 80%;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: xx-large;
+    padding: 2%;
+}
+.disabled{
+    display: none;
+}
+
+
+.rotated{
+    animation: rotate 0.2s forwards linear;
+}
+.unrotate{
+    animation: unrotate 0.2s forwards linear;
+    animation-delay: 0.2s;
+}
+@keyframes rotate {
+    to{
+        transform: rotateY(90deg);
+    }
+}
+@keyframes unrotate {
+    to{
+        transform: rotateY(0deg);
+    }
+}
